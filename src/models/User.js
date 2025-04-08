@@ -78,7 +78,7 @@ User.hasMany(EmailVerification, { foreignKey: "user_id", onDelete: "CASCADE" });
 EmailVerification.belongsTo(User, { foreignKey: "user_id" });
 
 
-// ** METHOD HELPER**
+// ** METHOD HELPER **
 
 // Method for hashing the password before creating a new user
 User.beforeCreate(async (user) => {
