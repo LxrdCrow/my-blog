@@ -22,15 +22,18 @@ const User = sequelize.define(
         username: { type: DataTypes.STRING, allowNull: false, unique: true },
         email: { type: DataTypes.STRING, allowNull: false, unique: true },
         password: { type: DataTypes.STRING, allowNull: false },
-        role: { type: DataTypes.ENUM("admin", "editor", "user"), defaultValue: "user" },
+        role: { type: DataTypes.ENUM("user","admin"), defaultValue: "user" },
         bio: { type: DataTypes.TEXT },
         profile_picture: { type: DataTypes.STRING },
         created_at: { type: DataTypes.DATE, defaultValue: DataTypes.NOW }
+        
     },
+
     {
         timestamps: false, 
         tableName: "users"
     }
+    
 );
 
 // ** RELATIONSHIPS **

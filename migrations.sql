@@ -148,14 +148,6 @@ CREATE TABLE email_verifications (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Create the user_roles table (Many-to-Many relationship between users and roles)
-CREATE TABLE user_roles (
-    user_id INT NOT NULL,
-    role ENUM('admin', 'editor', 'user') NOT NULL,
-    PRIMARY KEY (user_id, role),
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-)
-
 -- Create the user_friends table (Many-to-Many relationship between users for friend connections)
 CREATE TABLE user_friends (
     user_id INT NOT NULL,

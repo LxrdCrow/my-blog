@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../config/database");
 
 // Importing models
-const User = require("./user");
+const User = require("./User");
 const Comment = require("./Comment");
 const Like = require("./Like");
 const Category = require("./Category");
