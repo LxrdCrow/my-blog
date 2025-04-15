@@ -1,5 +1,7 @@
 # Working in progress ...
 
-## Blog with Node.js + Express
+## Blog with Node.js + Express + MySQL
 
-Creation models (user, tag, posttag,post, category, bookmark)
+Creation models (completed)
+Creation controllers (user, post, comment, )
+Creation helpers (emailverification, settings, tag, user, )
