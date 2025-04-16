@@ -148,17 +148,6 @@ CREATE TABLE email_verifications (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Create the user_friends table (Many-to-Many relationship between users for friend connections)
-CREATE TABLE user_friends (
-    user_id INT NOT NULL,
-    friend_id INT NOT NULL,
-    status ENUM('pending', 'accepted', 'blocked') DEFAULT 'pending',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (user_id, friend_id),
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (friend_id) REFERENCES users(id) ON DELETE CASCADE
-);
-
 -- Create the user_notifications table (Many-to-Many relationship between users and notifications)
 CREATE TABLE user_notifications (
     user_id INT NOT NULL,

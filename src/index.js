@@ -9,7 +9,6 @@ const categoryRoute = require('./routes/CategoryRoute');
 const tagRoute = require('./routes/TagRoute'); 
 const notificationRoute = require('./routes/NotificationRoute');
 const settingRoute = require('./routes/SettingRoute');
-const friendRoute = require('./routes/FriendRoute');
 const authRoute = require('./routes/AuthRoute'); 
 
 // Middleware
@@ -25,7 +24,6 @@ app.use('/api/categories', categoryRoute);
 app.use('/api/tags', tagRoute); 
 app.use('/api/notifications', notificationRoute);
 app.use('/api/settings', settingRoute);
-app.use('/api/friends', friendRoute);
 app.use('/api/auth', authRoute);
 
 const sequelize = require("./config/database"); 
